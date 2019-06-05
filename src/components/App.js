@@ -6,7 +6,7 @@ class App extends React.Component {
     return (
     <>
       <h2>My Bank</h2>
-      <Wallet/>
+      <Wallet />
     </>
     );
   }
