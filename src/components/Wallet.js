@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 
 export class Wallet extends React.Component {
   render() {
-    console.log(this.props.balance);
+    const { balance } = this.props
     return (
       <div>
-        <h3>Wallet balance</h3>
+        <h3 className="balance">Wallet balance: { balance }</h3>
       </div>
     )
   }
