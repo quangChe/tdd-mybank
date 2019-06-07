@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { deposit } from '../actions/my-balance';
+import { deposit, withdraw } from '../actions/my-balance';
 
 export class Wallet extends React.Component {
   state = {
@@ -26,7 +26,7 @@ export class Wallet extends React.Component {
       <div>
         <h3 className='balance'>Wallet balance: { balance }</h3>
         <br/>
-        <input 
+        <input type='number'
           onChange={this.changeAmount}
           className='wallet-input'/>
         <button
@@ -44,4 +44,4 @@ const mapStateToProps = (state) => ({
   balance: state
 })
 
-export default connect(mapStateToProps, { deposit })(Wallet);
+export default connect(mapStateToProps, { deposit, withdraw })(Wallet);
