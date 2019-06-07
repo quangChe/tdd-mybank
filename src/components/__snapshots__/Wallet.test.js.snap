@@ -12,6 +12,7 @@ exports[`Wallet renders properly 1`] = `
   <input
     className="wallet-input"
     onChange={[Function]}
+    type="number"
   />
   <button
     className="deposit-btn"
@@ -23,7 +24,7 @@ exports[`Wallet renders properly 1`] = `
     className="withdraw-btn"
     onClick={[Function]}
   >
-    Deposit
+    Withdraw
   </button>
 </div>
 `;
