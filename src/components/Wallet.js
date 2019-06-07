@@ -15,6 +15,10 @@ export class Wallet extends React.Component {
     this.props.deposit(this.state.amount);
   }
 
+  withdraw = () => {
+    this.props.withdraw(this.state.amount);
+  }
+
   render() {
     const { balance } = this.props;
     
@@ -28,6 +32,9 @@ export class Wallet extends React.Component {
         <button
           className='deposit-btn'
           onClick={this.deposit}>Deposit</button>
+        <button
+          className='withdraw-btn'
+          onClick={this.withdraw}>Withdraw</button>
       </div>
     )
   }
