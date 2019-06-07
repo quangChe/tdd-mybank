@@ -4,9 +4,11 @@ import { Wallet } from './Wallet';
 
 describe('Wallet', () => {
   const mockDepositFn = jest.fn();
+  const mockWithdrawFn = jest.fn();
   const props = {
     balance: 20,
     deposit: mockDepositFn,
+    withdraw: mockWithdrawFn,
   };
   const wallet = shallow(<Wallet {...props} />);
 
@@ -38,8 +40,18 @@ describe('Wallet', () => {
         wallet.find('.deposit-btn').simulate('click')
       )
 
-      it('dispatches the `deposit()` it receives from the props with local `amount` state', () => {
+      it('dispatches the `deposit` prop with the `amount` value from the local state', () => {
         expect(mockDepositFn).toHaveBeenCalledWith(parseInt(INPUT_VALUE, 10));
+      })
+    })
+
+    describe('and the user wants to make a withdrawal', () => {
+      beforeEach(() => 
+        wallet.find('.withdraw-btn').simulate('click')
+      )
+
+      it('dispatches the `withdraw` prop with the `amount` value from the local state', () => {
+        expect(mockWithdrawFn).toHaveBeenCalledWith(parseInt(INPUT_VALUE, 10));
       })
     })
   })
