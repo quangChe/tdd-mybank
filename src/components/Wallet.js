@@ -21,7 +21,6 @@ export class Wallet extends React.Component {
 
   render() {
     const { balance } = this.props;
-    
     return (
       <div>
         <h3 className='balance'>Wallet balance: { balance }</h3>
@@ -40,8 +39,6 @@ export class Wallet extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  balance: state
-})
+const mapStateToProps = ({ balance }) => ({ balance })
 
 export default connect(mapStateToProps, { deposit, withdraw })(Wallet);

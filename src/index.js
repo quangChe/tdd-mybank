@@ -5,7 +5,7 @@ import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
 import { createStore } from 'redux';
-import rootReducer from './reducers/my-balance';
+import rootReducer from './reducers';
 import { Provider } from 'react-redux';
 
 const store = createStore(rootReducer);
