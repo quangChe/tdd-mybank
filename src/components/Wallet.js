@@ -21,6 +21,7 @@ export class Wallet extends React.Component {
 
   render() {
     const { balance } = this.props;
+
     return (
       <div>
         <h3 className='balance'>Wallet balance: { balance }</h3>
