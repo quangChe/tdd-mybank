@@ -12,7 +12,7 @@ describe('Loot', () => {
 
   describe('when mounted', () => {
     const mockFetchBitcoin = jest.fn();
-    
+
     beforeEach(() => {
       props.fetchBitcoin = mockFetchBitcoin;
       loot = mount(<Loot {...props} />);
@@ -30,7 +30,7 @@ describe('Loot', () => {
     })
 
     it('displays the correct bitcoin value', () => {
-      expect(loot.find('h3').text()).toEqual('Bitcoin balance: 0.01');
+      expect(loot.find('.bitcoin-amount').text()).toEqual('Bitcoin balance: 0.01');
     })
   })
 })

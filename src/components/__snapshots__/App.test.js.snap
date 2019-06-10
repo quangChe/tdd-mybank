@@ -5,7 +5,9 @@ exports[`App renders without crashing 1`] = `
   <h2>
     My Bank
   </h2>
+  <hr />
   <Connect(Wallet) />
+  <hr />
   <Connect(Loot) />
 </Fragment>
 `;

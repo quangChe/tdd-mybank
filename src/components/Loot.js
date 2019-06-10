@@ -18,7 +18,7 @@ export class Loot extends React.Component {
 
   render() {
     return (
-      <h3>Bitcoin balance: { this.computeBitcoin() }</h3>
+      <h3 className='bitcoin-amount'>Bitcoin balance: { this.computeBitcoin() }</h3>
     )
   }
 }
