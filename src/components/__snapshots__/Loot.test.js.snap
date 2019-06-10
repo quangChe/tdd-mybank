@@ -2,6 +2,6 @@
 
 exports[`Loot renders correctly 1`] = `
 <h3>
-  Loot Component
+  Bitcoin balance: 
 </h3>
 `;
