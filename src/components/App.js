@@ -2,9 +2,8 @@ import React from 'react';
 import Wallet from './Wallet';
 import Loot from './Loot';
 
-class App extends React.Component {
-  render () {
-    return (
+const App = () => {
+  return (
     <>
       <h2>My Bank</h2>
       <hr/>
@@ -12,8 +11,7 @@ class App extends React.Component {
       <hr/>
       <Loot />
     </>
-    );
-  }
+  );
 }
 
 export default App;
